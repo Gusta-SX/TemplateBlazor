@@ -1,0 +1,24 @@
+﻿@page "/imovel"
+@inherits LayoutComponentBase
+
+<PageTitle>Imóvel</PageTitle>
+
+<HeadContent>
+    <link rel="stylesheet" href="css/bootstrap/swiper-bundle.min.css">
+    <link href="css/imovel.css" rel="stylesheet" />
+</HeadContent>
+
+<div class="imovel-page" id="imovel-page">
+    <ImagemDoImovel></ImagemDoImovel>
+
+    <div class="main-content container">
+        <div class="section">
+            <DetalhesDoImovel></DetalhesDoImovel>
+            <FormularioDoImovel></FormularioDoImovel>
+        </div>
+    </div>
+</div>
+
+@code {
+
+}

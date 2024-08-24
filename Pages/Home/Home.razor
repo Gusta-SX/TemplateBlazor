@@ -1,0 +1,495 @@
+﻿@page "/"
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JSRuntime
+
+<HeadContent>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link href="css/home.css" rel="stylesheet" />
+</HeadContent>
+
+<PageTitle>Home</PageTitle>
+
+<section class="main-img">
+    <div class="home-image">
+        <div class="image-cover hero-banner"></div>
+    </div>
+
+    <div class="main-search container">
+        <div class="main-title">
+            <h1 class="fw-bold text-white">Realize o Sonho que Sempre Sonhou</h1>
+            <p class="text-white-50 mt-2">A RedeImóveis é uma empresa de soluções imobiliárias que lhe oferece o sabor da terra da felicidade.</p>
+        </div>
+
+        <EditForm Model="@searchModel" OnValidSubmit="@HandleValidSubmit" FormName="searchForm">
+            <DataAnnotationsValidator />
+
+            <div class="tabs-btn">
+                <button type="button" class="tab-btn @GetTabClassBuscador(0)" @onclick="(() => SelectTabBuscador(0))">
+                    Comprar
+                </button>
+                <button type="button" class="tab-btn @GetTabClassBuscador(1)" @onclick="(() => SelectTabBuscador(1))">
+                    Alugar
+                </button>
+                <button type="button" class="tab-btn @GetTabClassBuscador(2)" @onclick="(() => SelectTabBuscador(2))">
+                    Vender
+                </button>
+            </div>
+
+            <div class="form-div">
+                <div class="input-div w-100">
+                    <label>Tipo</label>
+                    <InputSelect id="tipos" name="Tipo" class="input tipos" @bind-Value="searchModel.Tipo">
+                        @foreach (var tipo in tipos)
+                        {
+                            <option value="@tipo">@tipo</option>
+                        }
+                    </InputSelect>
+                </div>
+                <div class="input-div w-100">
+                    <label>Estados</label>
+                    <InputSelect id="estados" name="Estado" class="input estados" @bind-Value="searchModel.Estado">
+                        @foreach (var estado in estados)
+                        {
+                            <option value="@estado">@estado</option>
+                        }
+                    </InputSelect>
+                </div>
+                <div class="input-div w-100">
+                    <label>Cidades</label>
+                    <InputSelect id="cidades" name="Cidade" class="input cidades" @bind-Value="searchModel.Cidade">
+                        @foreach (var cidade in cidades)
+                        {
+                            <option value="@cidade">@cidade</option>
+                        }
+                    </InputSelect>
+                </div>
+                <div class="input-div w-100">
+                    <label>Bairros</label>
+                    <InputSelect id="bairros" name="Bairro" class="input bairros" @bind-Value="searchModel.Bairro">
+                        @foreach (var bairro in bairros)
+                        {
+                            <option value="@bairro">@bairro</option>
+                        }
+                    </InputSelect>
+                </div>
+                <div class="input-div w-100">
+                    <label>Quartos</label>
+                    <InputSelect id="quartos" name="Quartos" class="input quartos" @bind-Value="searchModel.Quartos">
+                        @foreach (var quarto in quartos)
+                        {
+                            <option value="@quarto">@quarto</option>
+                        }
+                    </InputSelect>
+                </div>
+                <div class="input-div w-100">
+                    <label>Valor Médio</label>
+                    <InputText id="valorMedio" name="ValorMedio" class="input" placeholder="R$ 0,00" @bind-Value="searchModel.ValorMedio" />
+                </div>
+                <div class="input-div w-100">
+                    <label>Endereço/Empreendimento</label>
+                    <InputText id="palavraChave" name="BuscaEndereco" class="input" placeholder="Digite o endereço" @bind-Value="searchModel.BuscaEndereco" />
+                </div>
+                <div class="filter-btns d-flex justify-content-center">
+                    <button id="botaoDeBusca" class="btn fill-btn" @onclick="HandleValidSubmit">
+                        <i class='bx bx-search'></i>
+                        buscar
+                    </button>
+                </div>
+            </div>
+        </EditForm>
+    </div>
+</section>
+
+<section class="section slide-container">
+    <div class="container">
+        <div class="slide-top">
+            <div class="text-title">
+                <h4>Explore nossas opções</h4>
+                <h2 class="fw-bold">Imóveis em Destaque</h2>
+            </div>
+            <div class="slide-tabs justify-content-center">
+                <button class="tab @GetTabClassSlide(0)" @onclick="(() => SelectTabSlide(0))">
+                    <i class='bx bxs-home'></i>Casa
+                </button>
+                <button class="tab @GetTabClassSlide(1)" @onclick="(() => SelectTabSlide(1))">
+                    <i class='bx bxs-buildings'></i>Apartamento
+                </button>
+            </div>
+            <div class="slide-arrow">
+                <a class="btn left prev">
+                    <i class='bx bx-chevron-left'></i>
+                </a>
+                <a class="btn right next">
+                    <i class='bx bx-chevron-right'></i>
+                </a>
+            </div>
+        </div>
+        <div class="slide-content">
+            <div id="owl-demo" class="owl-carousel">
+                @for (int i = 1; i <= 4; i++)
+                {
+                    <a href="#" class="item" title="Acesse o Imóvel">
+                        <div class="item-img">
+                            <div class="slide-img">
+                                <img src="https://prd-cdn-portal.azureedge.net/fotos/640206/6b38bff4576e139fde642d58d541fa7d.jpg" alt="Imagem de um imóvel em destaque">
+                            </div>
+                            <div class="listing-badges">
+                                <span class="highlight"><i class='bx bxs-star'></i> Super Destaque</span>
+                            </div>
+                            <div class="valu-cont">
+                                <span class="price">R$ 280.000,00</span>
+
+                                <div class="button-efct">
+                                    <div class="btn-round">
+                                        <i class="favorite-btn bx bx-heart login" title="Favoritar"></i>
+                                    </div>
+                                    <div class="btn-round">
+                                        <i class="bx bxs-share-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-display">
+                            <div class="item-icons">
+                                <div class="info-one room">
+                                    <i class="bx bxs-bed"></i>
+                                    <span>33</span>
+                                </div>
+                                <div class="info-one suit">
+                                    <i class="bx bxs-bath"></i>
+                                    <span>4</span>
+                                </div>
+                                <div class="info-one vaga">
+                                    <i class='bx bxs-car'></i>
+                                    <span>5</span>
+                                </div>
+                                <div class="info-one area">
+                                    <i class="bx bxs-area"></i>
+                                    <span>380 m²</span>
+                                </div>
+                            </div>
+                            <div class="item-data">
+                                <span>Casa Apartamento, Brasília Casa Apartamento, Brasília</span>
+                                <span class="adress"><i class="bx bxs-map"></i>CCSW 1, SUDOESTE, BRASILIA CCSW 1, SUDOESTE, BRASILIA</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="item" title="Acesse o Imóvel">
+                        <div class="item-img">
+                            <div class="slide-img">
+                                <img src="https://storage.prdfotos.com.br/fotos/861651/24b61d0a697b0b9638b56dff7b80c7a2.jpg" alt="Imagem de um imóvel em destaque">
+                            </div>
+                            <div class="listing-badges">
+                                <span class="secure"><i class='bx bxs-lock'></i> Imóvel Seguro</span>
+                            </div>
+                            <div class="valu-cont">
+                                <span class="price">R$ 280.000,00</span>
+
+                                <div class="button-efct">
+                                    <div class="btn-round">
+                                        <i class="favorite-btn bx bx-heart login" title="Favoritar"></i>
+                                    </div>
+                                    <div class="btn-round">
+                                        <i class="bx bxs-share-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-display">
+                            <div class="item-icons">
+                                <div class="info-one room">
+                                    <i class="bx bxs-bed"></i>
+                                    <span>5</span>
+                                </div>
+                                <div class="info-one suit">
+                                    <i class="bx bxs-bath"></i>
+                                    <span>1</span>
+                                </div>
+                                <div class="info-one vaga">
+                                    <i class='bx bxs-car'></i>
+                                    <span>3</span>
+                                </div>
+                                <div class="info-one area">
+                                    <i class="bx bxs-area"></i>
+                                    <span>28 m²</span>
+                                </div>
+                            </div>
+                            <div class="item-data">
+                                <span>Casa Apartamento, Brasília Casa Apartamento, Brasília</span>
+                                <span class="adress"><i class="bx bxs-map"></i>CCSW 1, SUDOESTE, BRASILIA CCSW 1, SUDOESTE, BRASILIA</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="item" title="Acesse o Imóvel">
+                        <div class="item-img">
+                            <div class="slide-img">
+                                <img src="https://prd-cdn-portal.azureedge.net/fotos/771450/bbc25562f11f6891873f5ed8de662e97.jpg" alt="Imagem de um imóvel em destaque">
+                            </div>
+                            <div class="listing-badges">
+                                <span class="popular"><i class='bx bxs-hot'></i> Popular</span>
+                            </div>
+                            <div class="valu-cont">
+                                <span class="price">R$ 280.000,00</span>
+
+                                <div class="button-efct">
+                                    <div class="btn-round">
+                                        <i class="favorite-btn bx bx-heart login" title="Favoritar"></i>
+                                    </div>
+                                    <div class="btn-round">
+                                        <i class="bx bxs-share-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-display">
+                            <div class="item-icons">
+                                <div class="info-one room">
+                                    <i class="bx bxs-bed"></i>
+                                    <span>5</span>
+                                </div>
+                                <div class="info-one suit">
+                                    <i class="bx bxs-bath"></i>
+                                    <span>1</span>
+                                </div>
+                                <div class="info-one vaga">
+                                    <i class='bx bxs-car'></i>
+                                    <span>3</span>
+                                </div>
+                                <div class="info-one area">
+                                    <i class="bx bxs-area"></i>
+                                    <span>28 m²</span>
+                                </div>
+                            </div>
+                            <div class="item-data">
+                                <span>Casa Apartamento, Brasília Casa Apartamento, Brasília</span>
+                                <span class="adress"><i class="bx bxs-map"></i>CCSW 1, SUDOESTE, BRASILIA CCSW 1, SUDOESTE, BRASILIA</span>
+                            </div>
+                        </div>
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section service-container dark">
+    <div class="container service-main">
+        <div class="text-title">
+            <h4>Nossos serviços</h4>
+            <h2 class="fw-bold">Saiba o que podemos te oferecer</h2>
+        </div>
+
+        <div class="service-content">
+            <div class="service-card">
+                <i class='bx bx-home'></i>
+                <div class="service-text">
+                    <h3 class="fw-bold">Compra e Venda</h3>
+                    <p class="text-black-50">Compre ou venda seu imóvel com a gente. Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. </p>
+                </div>
+                <div class="service-btn">
+                    <a href="#" class="btn fill-btn">Saiba mais</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <i class='bx bx-dollar-circle'></i>
+                <div class="service-text">
+                    <h3 class="fw-bold">Financiamento</h3>
+                    <p class="text-black-50">Financie seu imóvel com as melhores taxas do mercado. Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. </p>
+                </div>
+                <div class="service-btn">
+                    <a href="#" class="btn fill-btn">Saiba mais</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <i class='bx bx-home-heart'></i>
+                <div class="service-text">
+                    <h3 class="fw-bold">Aluguel</h3>
+                    <p class="text-black-50">Alugue um imóvel conosco. Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. </p>
+                </div>
+                <div class="service-btn">
+                    <a href="#" class="btn fill-btn">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section about-container">
+    <div class="about-history container">
+        <div class="about-main">
+            <div class="text-title">
+                <h4>Conheça nossa história</h4>
+                <h2 class="fw-bold">Auxiliando pessoas a localizar o imóvel apropriado.</h2>
+            </div>
+            <p class="text-black-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc. Nullam nec nunc nec libero ultricies fermentum. Nullam nec nunc nec libero ultricies fermentum. Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
+            <ul class="about-list">
+                <li><i class='bx bxs-check-circle'></i> Mude-se em 30 dias ou menos</li>
+                <li><i class='bx bxs-check-circle'></i> O melhor interesse disponível </li>
+                <li><i class='bx bxs-check-circle'></i> Mais de 10% de valorização anual das casas </li>
+                <li><i class='bx bxs-check-circle'></i> Imóveis bem localizados </li>
+            </ul>
+            <button href="#" class="btn fill-btn">Entre em contato <i class='bx bxs-right-arrow-circle'></i></button>
+        </div>
+        <div class="about-img">
+            <img src="https://cdn.prod.website-files.com/65e5e5474c606fdc3f19a597/6601d89b83a99fbecc726703_innovation-defines-our-real-estate-image-property-x-webflow-template.jpg" />
+            <div class="feature-card top-left">
+                <i class='bx bxs-bath'></i>
+                <span>2 bathrooms</span>
+            </div>
+            <div class="feature-card top-right">
+                <i class='bx bxs-bed'></i>
+                <span>3 bedrooms</span>
+            </div>
+            <div class="feature-card bottom-left">
+                <i class='bx bxs-car'></i>
+                <span>1 garage</span>
+            </div>
+            <div class="feature-card bottom-right">
+                <i class='bx bxs-area'></i>
+                <span>120 m²</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="join-center container">
+        <div class="join-text">
+            <h3 class="text-white">Faça parte da nossa Rede</h3>
+            <p class="text-white-50">Fusce venenatis tellus a felis scelerisque. venenatis tellus a felis scelerisque. </p>
+        </div>
+
+        @*     <div class="join-description">
+        <p class="text-white">Fusce venenatis tellus a felis scelerisque. venenatis tellus a felis scelerisque. Fusce venenatis tellus a felis scelerisque. venenatis tellus a felis scelerisque. Fusce venenatis tellus a felis scelerisque. venenatis tellus a felis scelerisque.</p>
+        </div> *@
+
+        <div class="join-btn">
+            <a href="#" class="btn fill-btn white">Saiba mais</a>
+            <a href="#" class="btn fill-btn white">Saiba mais</a>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    window.initializeOwlCarousel = () => {
+        var owlOne = $("#owl-demo");
+        owlOne.owlCarousel({
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                800: {
+                    items: 2,
+                    },
+                1138: {
+                    items: 3,
+                }
+            }
+        });
+
+        $(".next").click(function () {
+            owlOne.trigger('next.owl.carousel');
+        });
+        $(".prev").click(function () {
+            owlOne.trigger('prev.owl.carousel');
+        });
+    };
+</script>
+
+@code {
+    // TAB DO BUSCADOR / SLIDE
+    private int selectedTabBuscador = 0;
+    private int selectedTabSlide = 0;
+
+    // -- Para o buscador
+    private void SelectTabBuscador(int tabIndex)
+    {
+        selectedTabBuscador = tabIndex;
+    }
+
+    private string GetTabClassBuscador(int tabIndex)
+    {
+        return selectedTabBuscador == tabIndex ? "active" : "";
+    }
+
+    // -- Para o slide
+    private void SelectTabSlide(int tabIndex)
+    {
+        selectedTabSlide = tabIndex;
+    }
+
+    private string GetTabClassSlide(int tabIndex)
+    {
+        return selectedTabSlide == tabIndex ? "active" : "";
+    }
+
+    // BUSCADOR
+    private SearchModel searchModel = new SearchModel();
+
+    private List<string> negocios = new List<string> { "ALUGUEL", "VENDA" };
+
+    private List<string> tipos = new List<string>
+    {
+        "TODOS", "APARTAMENTO", "CASA", "CASA CONDOMINIO", "GALPAO", "GARAGEM",
+        "HOTEL-FLAT", "KITNET", "LOJA", "LOTE", "LOTEAMENTO", "PONTO COMERCIAL",
+        "PREDIO", "RURAL", "SALA"
+    };
+
+    private List<string> estados = new List<string> { "DF", "GO", "US" };
+
+    private List<string> cidades = new List<string>
+    {
+        "TODOS", "AGUAS CLARAS", "ALPHAVILLE", "BRASILIA", "BRAZLANDIA",
+        "CANDANGOLANDIA", "CEILANDIA", "CRUZEIRO", "GAMA", "GUARA", "NUCLEO BANDEIRANTE",
+        "PLANALTINA", "RECANTO DAS EMAS", "RIACHO FUNDO", "SAMAMBAIA", "SANTA MARIA",
+        "SETOR INDUSTRIAL", "SOBRADINHO", "TAGUATINGA", "VARJAO", "VICENTE PIRES"
+    };
+
+    private List<string> bairros = new List<string>
+    {
+        "ALPHAVILLE BRASILIA", "AREAL", "ARNIQUEIRAS", "ASA NORTE", "ASA SUL",
+        "BRAZLANDIA", "CANDANGOLANDIA", "CEILANDIA NORTE", "CEILANDIA SUL",
+        "COLONIA AGRICOLA SAMAMBAIA", "CONDOMINIO RK", "GUARA I", "GUARA II",
+        "JARDIM BOTANICO", "JARDINS MANGUEIRAL", "LAGO NORTE", "LAGO SUL", "NOROESTE",
+        "NORTE", "NOVO", "NUCLEO BANDEIRANTE", "OCTOGONAL", "PARK SUL", "PARK WAY",
+        "PONTE ALTA", "QUADRAS ECONOMICAS LUCIO COSTA", "RECANTO DAS EMAS",
+        "RIACHO FUNDO", "RIACHO FUNDO II", "SAMAMBAIA NORTE", "SAMAMBAIA SUL", "SCIA",
+        "SETOR HOSPITALAR", "SETOR INDUSTRIAL", "SETOR LESTE", "SETOR MEIRELES",
+        "SETOR SUL", "SIA", "SIG", "SUDOESTE", "SUL", "TAGUATINGA CENTRO",
+        "TAGUATINGA NORTE", "TAGUATINGA SUL", "TAQUARI", "VARJAO", "VELHO", "VIAL SAO JOSE",
+        "VICENTE PIRES", "ZONA RURAL"
+    };
+
+    private List<string> quartos = new List<string> { "0", "1", "2", "3", "4+" };
+
+    // -- Função do Button
+    private async Task HandleValidSubmit()
+    {
+        var queryParams = new Dictionary<string, object>
+        {
+            { "negocio", searchModel.Negocio },
+            { "tipo", searchModel.Tipo },
+            { "estado", searchModel.Estado },
+            { "cidade", searchModel.Cidade },
+            { "bairro", searchModel.Bairro },
+            { "quartos", searchModel.Quartos },
+            { "valorMedio", searchModel.ValorMedio },
+            { "buscaEndereco", searchModel.BuscaEndereco }
+        };
+
+        var uri = NavigationManager.GetUriWithQueryParameters("/busca", queryParams);
+        NavigationManager.NavigateTo(uri);
+    }
+    // SLIDE FIRST RENDER
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("initializeOwlCarousel");
+        }
+    }
+}

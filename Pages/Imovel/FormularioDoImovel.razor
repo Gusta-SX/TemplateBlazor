@@ -1,0 +1,132 @@
+﻿@using System.ComponentModel.DataAnnotations
+@inject IJSRuntime JSRuntime
+
+<aside class="sticky-container" id="propose-content">
+    <div class="immobile-price">
+        <div class="price">
+            <span class="grey-cl">Venda - Valor a Vista</span>
+            <h4>R$ 400.000</h4>
+        </div>
+        <div class="price-infos">
+            <div class="condom">
+                <span class="grey-cl">Condominio</span>
+                <span class="pr-weight">R$ 500</span>
+            </div>
+            <div class="line"></div>
+            <div class="iptu">
+                <span class="grey-cl">IPTU</span>
+                <span class="pr-weight">R$ 650/ano</span>
+            </div>
+        </div>
+
+        <div class="mobile-form">
+            <a class="button-price" @onclick="ScrollToPropos">Enviar Mensagem</a>
+        </div>
+    </div>
+    <div class="sticky-side" id="contactmodal">
+        <section class="main-sec">
+            <div class="anunci-div">
+                <div class="anunci-flex">
+                    <div class="anunci-img">
+                        <img src="img/logo-rede.png" alt="Logo do anunciante" />
+                    </div>
+                    <div class="anunci-info">
+                        <h3>Rede Imóveis</h3>
+                        <p><i class='bx bxs-badge-check'></i>Corretor de Imóveis</p>
+                    </div>
+                </div>
+                <a href="#"><i class='bx bxs-home'></i>10.255 Imóveis publicados</a>
+            </div>
+
+            <div class="line"></div>
+
+            <h5>Entre em contato conosco</h5>
+
+            <EditForm Model="@Model" OnValidSubmit="@OnValidSubmit" OnInvalidSubmit="OnInvalidSubmit">
+                <DataAnnotationsValidator></DataAnnotationsValidator>
+
+                <div class="form-input">
+                    <InputText @bind-Value="@Model.Name" id="name" placeholder="Nome" />
+                    <ValidationMessage For="@(() => Model.Name)" />
+                </div>
+
+                <div class="form-input">
+                    <InputText @bind-Value="@Model.Email" id="email" placeholder="E-mail" />
+                    <ValidationMessage For="@(() => Model.Email)" />
+                </div>
+
+                <div class="form-input">
+                    <InputText @bind-Value="@Model.Phone" id="phone" placeholder="Telefone" />
+                    <ValidationMessage For="@(() => Model.Phone)" />
+                </div>
+
+                <div class="form-input">
+                    <InputTextArea @bind-Value="@Model.Message" id="message" placeholder="Mensagem" />
+                    <ValidationMessage For="@(() => Model.Message)" />
+                </div>
+
+                <button class="form-submit" type="submit">ENVIAR</button>
+            </EditForm>
+
+            <p>@Result</p>
+
+            <p class="term-polict">
+                Ao usar 'Ver telefone', 'Enviar mensagem' ou 'WhatsApp', você concorda com os <a href="#">Termos de uso</a> e <a href="#">Política de privacidade</a>, afirma ter mais de 18 anos e permite o envio de dados ao anunciante.
+            </p>
+
+            <div class="line"></div>
+
+            <div class="talk-anunci">
+                <h4>Fale com o anunciante</h4>
+                <div class="talk-phone">
+                    <i class='bx bx-phone'></i> (61) 99999
+                    <a href="#">Ver telefone</a>
+                </div>
+            </div>
+        </section>
+        <a href="https://api.whatsapp.com/send?phone=5561999999999&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20im%C3%B3vel%20IJUR2W" target="_blank" class="whatsapp-btn">
+            <i class='bx bxl-whatsapp'></i>WhatsApp
+        </a>
+    </div>
+
+</aside>
+
+@code {
+    public Student Model { get; set; } = new();
+
+    public string Result = "";
+
+    public void OnValidSubmit()
+    {
+        Result = "Formulário enviado com sucesso e submetido!";
+    }
+
+    public void OnInvalidSubmit()
+    {
+        Result = "Formulário inválido!";
+    }
+
+
+    public class Student
+    {
+        public int Id { get; set; }
+
+        [Required(ErrorMessage = "Nome é obrigatório")]
+        public string Name { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "E-mail é obrigatório")]
+        [EmailAddress(ErrorMessage = "E-mail inválido")]
+        public string Email { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Telefone é obrigatório")]
+        public string Phone { get; set; }
+
+        [Required(ErrorMessage = "Mensagem é obrigatória")]
+        public string Message { get; set; } = string.Empty;
+    }
+
+    private async Task ScrollToPropos()
+    {
+        await JSRuntime.InvokeVoidAsync("scrollToPropos");
+    }
+}

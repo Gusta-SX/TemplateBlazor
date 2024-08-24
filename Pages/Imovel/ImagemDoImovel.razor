@@ -1,0 +1,54 @@
+﻿@inject IJSRuntime JSRuntime
+
+<div class="imv-image">
+    <div class="swiper-container gallery-top inner content-1 active">
+        <div class="swiper-wrapper">
+            @for (int i = 1; i <= 10; i++)
+            {
+                @foreach (var imageUrl in imageUrls)
+                {
+                    <div class="swiper-slide">
+                        <img src="@imageUrl" class="img-fluid" alt="Imagem" style="object-fit: cover;">
+                    </div>
+                }
+            }
+        </div>
+        <div class="swiper-button-next swiper-button-white mr-3"></div>
+        <div class="swiper-button-prev swiper-button-white ml-3"></div>
+    </div>
+
+    <section id="tour-content" class="inner content-2 tour">
+        <iframe class="iframe-video" src="https://www.youtube.com/embed/BeT-ZbtDYdk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+    </section>
+
+    <div class="btn-container container">
+        <div class="btn-div">
+            <button class="btn-1 active" onclick="makeActiveTab(1)">
+                <i class='bx bxs-camera'></i>
+                Fotos
+            </button>
+            <button class="btn-2" onclick="makeActiveTab(2)">
+                <i class='bx bxs-video'></i>
+                Video
+            </button>
+        </div>
+    </div>
+</div>
+
+@code {
+    private List<string> imageUrls = new List<string>
+    {
+        "img/img1.jpg",
+        "img/home.jpg",
+        "img/img3.jpg",
+    };
+
+    // SLIDE FIRST RENDER
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("initializeSwiper");
+        }
+    }
+}

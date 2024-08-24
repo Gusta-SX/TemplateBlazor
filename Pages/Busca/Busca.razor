@@ -1,0 +1,35 @@
+﻿@page "/busca"
+@inherits LayoutComponentBase
+
+<HeadContent>
+    <link href="css/busca.css" rel="stylesheet" />
+</HeadContent>
+
+
+<PageTitle>Busca de Imóveis</PageTitle>
+
+<section class="container">
+    <div class="busca-content">
+        <FiltroDaBusca />
+
+        <ResultadoDaBusca />
+    </div>
+</section>
+
+
+
+@code {
+    [Parameter] public string Negocio { get; set; }
+    [Parameter] public string Tipo { get; set; }
+    [Parameter] public string Estado { get; set; }
+    [Parameter] public string Cidade { get; set; }
+    [Parameter] public string Bairro { get; set; }
+    [Parameter] public string Quartos { get; set; }
+    [Parameter] public string ValorMedio { get; set; }
+    [Parameter] public string BuscaEndereco { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        // Processar os parâmetros e realizar a busca
+    }
+}

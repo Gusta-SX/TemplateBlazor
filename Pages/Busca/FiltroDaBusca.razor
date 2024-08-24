@@ -1,0 +1,311 @@
+﻿@inject FiltrosMobileBusca FiltrosMobileBusca;
+
+<div class="search-container @(FiltrosMobileBusca.IsActive ? "active" : "")">
+    <div class="search-filter">
+        <div class="filter-close">
+            <span>Filtros</span>
+            <i class='bx bx-x' @onclick="FiltrosMobileBusca.Toggle"></i>
+        </div>
+        <div class="filter-mobile">
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="tipo">Tipos</label>
+                    <select class="input" id="tipo" name="tipo">
+                        <option value="casa">TODOS</option>
+                        <option value="apartamento">Apartamento</option>
+                        <option value="terreno">Terreno</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="estado">Estado</label>
+                    <select class="input" id="estado" name="estado">
+                        <option value="casa">TODOS</option>
+                        <option value="apartamento">Apartamento</option>
+                        <option value="terreno">Terreno</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="cidade">Cidade</label>
+                    <select class="input" id="cidade" name="cidade">
+                        <option value="casa">TODAS</option>
+                        <option value="apartamento">Apartamento</option>
+                        <option value="terreno">Terreno</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="bairro">Bairro</label>
+                    <select class="input" id="bairro" name="bairro">
+                        <option value="casa">TODOS</option>
+                        <option value="apartamento">Apartamento</option>
+                        <option value="terreno">Terreno</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="quartos">Quartos</label>
+                    <div class="qnt-btns">
+                        <button class="quantity">1</button>
+                        <button class="quantity">2</button>
+                        <button class="quantity">3</button>
+                        <button class="quantity">4+</button>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label for="quartos">Valor</label>
+                    <div class="price-inputs">
+                        <div class="position-relative">
+                            <label for="preco-min" class="label-price">De</label>
+                            <input id="preco-min" type="tel" name="preco-min" inputmode="numeric" placeholder="R$ 0,00" pattern="[0-9]*" class="price-range input" value="">
+                        </div>
+                        <div class="position-relative">
+                            <label for="preco-max" class="label-price">Até</label>
+                            <input id="preco-max" type="tel" name="preco-max" inputmode="numeric" placeholder="R$ 0,00" pattern="[0-9]*" class="price-range input" value="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label for="banheiros">Banheiros</label>
+                    <div class="qnt-btns">
+                        <button class="quantity">1</button>
+                        <button class="quantity">2</button>
+                        <button class="quantity">3</button>
+                        <button class="quantity">4+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="other-filters">
+                <div class="filter-group types">
+                    <p class="item-title">Tipos</p>
+                    <div class="overflow">
+                        <label class="valores">
+                            <span>Apartamento</span>
+                            <span class="numbers">(13821)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Casa</span>
+                            <span class="numbers">(10938)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Casa Condominio</span>
+                            <span class="numbers">(6982)</span>
+                        </label>
+                        <label class="valores">
+                            <span>lote / terreno / area</span>
+                            <span class="numbers">(4352)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Sala</span>
+                            <span class="numbers">(1759)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Rural</span>
+                            <span class="numbers">(958)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Loja</span>
+                            <span class="numbers">(863)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Predio</span>
+                            <span class="numbers">(724)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Kitnet</span>
+                            <span class="numbers">(552)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Ponto Comercial</span>
+                            <span class="numbers">(207)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Galpao</span>
+                            <span class="numbers">(203)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Hotel-Flat</span>
+                            <span class="numbers">(156)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Garagem</span>
+                            <span class="numbers">(125)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Loteamento</span>
+                            <span class="numbers">(49)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <p class="item-title">Área</p>
+                    <div class="price-inputs">
+                        <div class="position-relative">
+                            <label for="area-min" class="label-price">De</label>
+                            <input id="area-min" type="tel" name="area-min" inputmode="numeric" placeholder="0 m²" pattern="[0-9]*" class="price-range input" value="">
+                        </div>
+                        <div class="position-relative">
+                            <label for="area-max" class="label-price">Até</label>
+                            <input id="area-max" type="tel" name="area-max" inputmode="numeric" placeholder="0 m²" pattern="[0-9]*" class="price-range input" value="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group types">
+                    <p class="item-title">Cidades</p>
+                    <div class="overflow">
+                        <label class="valores">
+                            <span>Apartamento</span>
+                            <span class="numbers">(13821)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Casa</span>
+                            <span class="numbers">(10938)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Casa Condominio</span>
+                            <span class="numbers">(6982)</span>
+                        </label>
+                        <label class="valores">
+                            <span>lote / terreno / area</span>
+                            <span class="numbers">(4352)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Sala</span>
+                            <span class="numbers">(1759)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Rural</span>
+                            <span class="numbers">(958)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Loja</span>
+                            <span class="numbers">(863)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Predio</span>
+                            <span class="numbers">(724)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Kitnet</span>
+                            <span class="numbers">(552)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Ponto Comercial</span>
+                            <span class="numbers">(207)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Galpao</span>
+                            <span class="numbers">(203)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Hotel-Flat</span>
+                            <span class="numbers">(156)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Garagem</span>
+                            <span class="numbers">(125)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Loteamento</span>
+                            <span class="numbers">(49)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <p class="item-title">Vagas</p>
+                    <div class="qnt-btns">
+                        <button class="quantity">1</button>
+                        <button class="quantity">2</button>
+                        <button class="quantity">3</button>
+                        <button class="quantity">4+</button>
+                    </div>
+                </div>
+
+                <div class="filter-group types">
+                    <p class="item-title">Características</p>
+                    <div class="overflow">
+                        <label class="valores">
+                            <span>Apartamento</span>
+                            <span class="numbers">(13821)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Casa</span>
+                            <span class="numbers">(10938)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Casa Condominio</span>
+                            <span class="numbers">(6982)</span>
+                        </label>
+                        <label class="valores">
+                            <span>lote / terreno / area</span>
+                            <span class="numbers">(4352)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Sala</span>
+                            <span class="numbers">(1759)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Rural</span>
+                            <span class="numbers">(958)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Loja</span>
+                            <span class="numbers">(863)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Predio</span>
+                            <span class="numbers">(724)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Kitnet</span>
+                            <span class="numbers">(552)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Ponto Comercial</span>
+                            <span class="numbers">(207)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Galpao</span>
+                            <span class="numbers">(203)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Hotel-Flat</span>
+                            <span class="numbers">(156)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Garagem</span>
+                            <span class="numbers">(125)</span>
+                        </label>
+                        <label class="valores">
+                            <span>Loteamento</span>
+                            <span class="numbers">(49)</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @*     <div class="more-filter">
+        <button>Ver mais filtros</button>
+        </div> *@
+    </div>
+</div>
+
+
+@code {
+    protected override void OnInitialized()
+    {
+        FiltrosMobileBusca.OnToggle += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        FiltrosMobileBusca.OnToggle -= StateHasChanged;
+    }
+}

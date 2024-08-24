@@ -1,0 +1,113 @@
+﻿@using System.ComponentModel.DataAnnotations
+
+<footer>
+    <div class="main-content container">
+        <div class="left box">
+            <div class="topics">
+                <img src="img/logo-rede.png" />
+            </div>
+            <div class="footer-text">
+                <p>
+                    For athletes, high altitude produces two contradictory effects
+                    on performance. For explosive events
+                    the reduction in atmospheric pressure means there is less resistance.
+                </p>
+            </div>
+        </div>
+
+        <div class="middle box">
+            <div class="topic">Navegação</div>
+            <ul class="footer-links">
+                <li><a class="buscaDeVendaFooter" title="Venda" href="/venda"> Venda </a></li>
+            </ul>
+            <ul class="footer-links">
+                <li><a class="buscaDeAluguelFooter" title="Aluguel" href="/aluguel"> Aluguel </a></li>
+            </ul>
+            <ul class="footer-links">
+                <li><a class="Footer" title="Fale Conosco" href="/FaleComAImobiliaria/FaleConosco"> Fale Conosco </a></li>
+            </ul>
+            <ul class="footer-links">
+                <li><a class="Footer" title="Serviços" href="#" rel="nofollow" target="_blank"> Serviços </a></li>
+            </ul>
+            <ul class="footer-links">
+                <li><a class="Footer" title="Descomplica" href="https://www.youtube.com/watch?v=2j9DKgRDxLM" rel="nofollow" target="_blank"> Descomplica </a></li>
+            </ul>
+            <ul class="footer-links">
+                <li><a class="Footer" title="Quem Somos" href="/paginaMenu/quem-somos-131" rel="nofollow" target="_blank"> Quem Somos </a></li>
+            </ul>
+        </div>
+
+        <div class="middle box">
+            <div class="topic">Conta</div>
+            <ul>
+                <li><a href="/Conta/Index">Meu Perfil</a></li>
+                <li><a href="../Favoritos/Index"> Meus Favoritos</a></li>
+                <li><a href="../Proposta/Index"> Propostas </a></li>
+                <li><a href="../Visita/Index"> Visitas </a></li>
+                <li><a href="/Conta/Sair"> Sair</a></li>
+            </ul>
+        </div>
+
+        <div class="right box">
+            <div class="topic">Redes Sociais</div>
+            <div class="media-icons">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+            <div class="footer-mail">
+                <p>Receba nossas novidades</p>
+                <EditForm Model="emailModel" OnValidSubmit="HandleValidSubmit" OnInvalidSubmit="OnInvalidSubmit" FormName="emailForm">
+                    <DataAnnotationsValidator />
+
+                    <div class="input-group mb-3">
+                        <InputText @bind-Value="emailModel.Email" placeholder="Insira seu e-mail" class="form-control" />
+                        <button class="btn btn-outline-secondary" @onclick="HandleValidSubmit">
+                            <i class='bx bx-chevron-right'></i>
+                        </button>
+                    </div>
+                    <ValidationMessage For="@(() => emailModel.Email)" />
+                </EditForm>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="container">
+            <div class="terms-policts">
+                <a href="#" title="Termos de Uso" target="_blank">Termos de Uso</a>
+                <a href="#" title="Política de Privacidade" target="_blank">Política de Privacidade</a>
+            </div>
+            <div class="copyright">
+                <p> © 2024 Abdala Imóveis. Todos os Direitos Reservados.</p>
+                <p>Criado Por - <a href="http://www.timipro.com.br" title="TimiPro" target="_blank">TimiPro </a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+@code {
+    private EmailModel emailModel = new EmailModel();
+
+    private void HandleValidSubmit()
+    {
+        if (new EmailAddressAttribute().IsValid(emailModel.Email))
+        {
+            // Lógica para envio do e-mail
+            Console.WriteLine($"Email enviado: {emailModel.Email}");
+        }
+    }
+
+
+    public void OnInvalidSubmit()
+    {
+        Console.WriteLine($"Email nao enviado: {emailModel.Email}");
+    }
+
+    public class EmailModel
+    {
+        [Required(ErrorMessage = "Email é obrigatório.")]
+        [EmailAddress(ErrorMessage = "Email inválido.")]
+        public string Email { get; set; } = string.Empty;
+    }
+}
