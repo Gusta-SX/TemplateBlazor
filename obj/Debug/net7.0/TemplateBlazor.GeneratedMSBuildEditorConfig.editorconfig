@@ -13,75 +13,75 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = TemplateBlazor
 build_property.RootNamespace = TemplateBlazor
-build_property.ProjectDir = C:\Users\AMD\source\repos\TemplateBlazor\TemplateBlazor\
+build_property.ProjectDir = C:\Users\gugaa\Desktop\TemplateBlazor\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\AMD\source\repos\TemplateBlazor\TemplateBlazor
+build_property.MSBuildProjectDirectory = C:\Users\gugaa\Desktop\TemplateBlazor
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/AMD/source/repos/TemplateBlazor/TemplateBlazor/App.razor]
+[C:/Users/gugaa/Desktop/TemplateBlazor/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/AMD/source/repos/TemplateBlazor/TemplateBlazor/Pages/Busca/Busca.razor]
+[C:/Users/gugaa/Desktop/TemplateBlazor/Pages/Busca/Busca.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnVzY2FcQnVzY2EucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/AMD/source/repos/TemplateBlazor/TemplateBlazor/Pages/Busca/FiltroDaBusca.razor]
+[C:/Users/gugaa/Desktop/TemplateBlazor/Pages/Busca/FiltroDaBusca.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnVzY2FcRmlsdHJvRGFCdXNjYS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/AMD/source/repos/TemplateBlazor/TemplateBlazor/Pages/Busca/ImovelDoResultado.razor]
+[C:/Users/gugaa/Desktop/TemplateBlazor/Pages/Busca/ImovelDoResultado.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnVzY2FcSW1vdmVsRG9SZXN1bHRhZG8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/AMD/source/repos/TemplateBlazor/TemplateBlazor/Pages/Busca/ResultadoDaBusca.razor]
+[C:/Users/gugaa/Desktop/TemplateBlazor/Pages/Busca/ResultadoDaBusca.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnVzY2FcUmVzdWx0YWRvRGFCdXNjYS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/AMD/source/repos/TemplateBlazor/TemplateBlazor/Pages/Home/Home.razor]
+[C:/Users/gugaa/Desktop/TemplateBlazor/Pages/Home/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVxIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/AMD/source/repos/TemplateBlazor/TemplateBlazor/Pages/Imovel/BreadcrumbDoImovel.razor]
+[C:/Users/gugaa/Desktop/TemplateBlazor/Pages/Imovel/BreadcrumbDoImovel.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW1vdmVsXEJyZWFkY3J1bWJEb0ltb3ZlbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/AMD/source/repos/TemplateBlazor/TemplateBlazor/Pages/Imovel/DetalhesDoImovel.razor]
+[C:/Users/gugaa/Desktop/TemplateBlazor/Pages/Imovel/DetalhesDoImovel.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW1vdmVsXERldGFsaGVzRG9JbW92ZWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/AMD/source/repos/TemplateBlazor/TemplateBlazor/Pages/Imovel/FormularioDoImovel.razor]
+[C:/Users/gugaa/Desktop/TemplateBlazor/Pages/Imovel/FormularioDoImovel.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW1vdmVsXEZvcm11bGFyaW9Eb0ltb3ZlbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/AMD/source/repos/TemplateBlazor/TemplateBlazor/Pages/Imovel/ImagemDoImovel.razor]
+[C:/Users/gugaa/Desktop/TemplateBlazor/Pages/Imovel/ImagemDoImovel.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW1vdmVsXEltYWdlbURvSW1vdmVsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/AMD/source/repos/TemplateBlazor/TemplateBlazor/Pages/Imovel/Imovel.razor]
+[C:/Users/gugaa/Desktop/TemplateBlazor/Pages/Imovel/Imovel.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW1vdmVsXEltb3ZlbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/AMD/source/repos/TemplateBlazor/TemplateBlazor/Shared/Footer.razor]
+[C:/Users/gugaa/Desktop/TemplateBlazor/Shared/Footer.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEZvb3Rlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/AMD/source/repos/TemplateBlazor/TemplateBlazor/Shared/MainLayout.razor]
+[C:/Users/gugaa/Desktop/TemplateBlazor/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/AMD/source/repos/TemplateBlazor/TemplateBlazor/Shared/NavMenu.razor]
+[C:/Users/gugaa/Desktop/TemplateBlazor/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/AMD/source/repos/TemplateBlazor/TemplateBlazor/Shared/SurveyPrompt.razor]
+[C:/Users/gugaa/Desktop/TemplateBlazor/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/AMD/source/repos/TemplateBlazor/TemplateBlazor/_Imports.razor]
+[C:/Users/gugaa/Desktop/TemplateBlazor/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
