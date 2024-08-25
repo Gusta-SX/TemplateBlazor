@@ -419,6 +419,10 @@ select.btn-center {
     max-height: none;
 }
 
+.discription-text .span.active .opc-div {
+    display: none;
+}
+
 .discription-text .opc-div {
     height: 75px;
     position: relative;

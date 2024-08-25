@@ -86,7 +86,7 @@ h1:focus {
     z-index: 1000;
 }
 
-    #blazor-error-ui .dismiss {
+#blazor-error-ui .dismiss {
         cursor: pointer;
         position: absolute;
         right: 0.75rem;
@@ -99,7 +99,7 @@ h1:focus {
     color: white;
 }
 
-    .blazor-error-boundary::after {
+.blazor-error-boundary::after {
         content: "An error has occurred."
     }
 
@@ -137,21 +137,21 @@ input {
     transition: all .2s ease-in-out;
 }
 
-    .fill-btn.white {
-        background: white;
+.fill-btn.white {
+    background: white;
+    color: rgb(33 37 41);
+}
+
+.fill-btn.white:hover {
         color: rgb(33 37 41);
     }
 
-        .fill-btn.white:hover {
-            color: rgb(33 37 41);
-        }
+.fill-btn:hover {
+    transform: translateY(-2px);
+    color: white;
+}
 
-    .fill-btn:hover {
-        transform: translateY(-2px);
-        color: white;
-    }
-
-    .fill-btn i {
+.fill-btn i {
         font-size: 15px;
         color: white;
     }
@@ -162,7 +162,7 @@ footer {
     background: #303441;
 }
 
-    footer .main-content {
+footer .main-content {
         margin: auto;
         padding: 35px 20px 30px;
         display: flex;
@@ -170,105 +170,109 @@ footer {
         flex-wrap: wrap;
     }
 
-        footer .main-content .box {
-            width: 25%;
-            transition: all 0.4s ease;
-        }
+footer .main-content .box {
+    width: 25%;
+    transition: all 0.4s ease;
+}
 
-        footer .main-content .middle {
-            padding-left: 80px;
-            flex-direction: column;
-            display: flex;
-            align-items: flex-start;
-        }
+footer .main-content .middle {
+    padding-left: 80px;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+}
 
-        footer .main-content p,
-        footer .main-content a {
-            color: #fff;
-        }
+footer .main-content p,
+footer .main-content a {
+    color: #fff;
+}
 
-        footer .main-content .topic,
-        footer .main-content .topics {
-            font-size: 22px;
-            font-weight: 600;
-            color: #fff;
-            margin-bottom: 16px;
-        }
+footer .main-content .topic,
+footer .main-content .topics {
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 16px;
+}
 
-            footer .main-content .topics img {
-                max-width: 150px;
-            }
+footer .main-content .topics img {
+    max-width: 150px;
+}
 
-            footer .main-content .topic::after {
-                display: block;
-                height: 3px;
-                font-weight: bold;
-                background-color: aqua;
-                content: " ";
-                width: 50px;
-                margin-top: 0.3rem;
-                margin-bottom: 1rem;
-            }
+footer .main-content .topic::after {
+        display: block;
+        height: 3px;
+        font-weight: bold;
+        background-color: aqua;
+        content: " ";
+        width: 50px;
+        margin-top: 0.3rem;
+        margin-bottom: 1rem;
+    }
 
-        footer .main-content .middle ul {
-            text-decoration: none;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
+footer .main-content .middle ul {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-        footer .main-content .middle a {
-            line-height: 32px;
-        }
+footer .main-content .middle a {
+    line-height: 32px;
+}
 
-        footer .main-content .footer-text {
-            margin: 30px 0 0;
-        }
+footer .main-content .footer-text {
+    margin: 30px 0 0;
+}
 
-        footer .main-content .media-icons {
+footer .main-content .media-icons {
             margin-bottom: 15px;
             display: flex;
             gap: 5px;
         }
 
-            footer .main-content .media-icons a {
-                height: 45px;
-                width: 45px;
-                display: flex;
-                text-align: center;
-                line-height: 43px;
-                border-radius: 50%;
-                border: 2px solid #f9f1ec;
-                margin: 0px 5px 0 0;
-                transition: all 0.3s ease;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                padding: 21px 20px 20px 21px;
-            }
+footer .main-content .media-icons a {
+    height: 45px;
+    width: 45px;
+    display: flex;
+    text-align: center;
+    line-height: 43px;
+    border-radius: 50%;
+    border: 2px solid #f9f1ec;
+    margin: 0px 5px 0 0;
+    transition: all 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 21px 20px 20px 21px;
+}
 
-                footer .main-content .media-icons a:hover {
-                    border-color: aqua;
-                    color: aqua;
-                }
+footer .main-content .media-icons a:hover {
+    border-color: aqua;
+    color: aqua;
+}
 
-                footer .main-content .media-icons a i {
+footer .main-content .media-icons a i {
                     font-size: 22px;
                 }
 
-        footer .main-content .footer-mail {
-            margin: 25px 0 0;
-        }
+footer .main-content .footer-mail {
+    margin: 25px 0 0;
+}
 
-            footer .main-content .footer-mail .form-control {
+footer .main-content .footer-mail .form-control {
                 font-size: 1.3rem;
             }
 
-    footer .input-group i {
+footer .footer-brand {
+    font-size: 3rem;
+}
+
+footer .input-group i {
         font-size: 35px;
     }
 
-    footer .bottom {
+footer .bottom {
         width: 100%;
         text-align: center;
         color: #d9d9d9;
@@ -276,31 +280,31 @@ footer {
         padding: 15px 0px;
     }
 
-        footer .bottom .container {
+footer .bottom .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        footer .bottom .terms-policts {
+footer .bottom .terms-policts {
             display: flex;
             gap: 30px;
         }
 
-        footer .bottom a:hover {
+footer .bottom a:hover {
             text-decoration: underline;
             color: aqua;
         }
 
-        footer .bottom .copyright {
+footer .bottom .copyright {
             text-align: end;
         }
 
-        footer .bottom p {
+footer .bottom p {
             margin: 0
         }
 
-        footer .bottom a {
+footer .bottom a {
             color: var(--primary-color);
         }
 

@@ -128,7 +128,7 @@
             <div id="owl-demo" class="owl-carousel">
                 @for (int i = 1; i <= 4; i++)
                 {
-                    <a href="#" class="item" title="Acesse o Imóvel">
+                    <a href="imovel" class="item" title="Acesse o Imóvel">
                         <div class="item-img">
                             <div class="slide-img">
                                 <img src="https://prd-cdn-portal.azureedge.net/fotos/640206/6b38bff4576e139fde642d58d541fa7d.jpg" alt="Imagem de um imóvel em destaque">
@@ -289,7 +289,7 @@
                     <p class="text-black-50">Compre ou venda seu imóvel com a gente. Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. </p>
                 </div>
                 <div class="service-btn">
-                    <a href="#" class="btn fill-btn">Saiba mais</a>
+                    <button type="button" class="btn fill-btn">Saiba mais</button>
                 </div>
             </div>
             <div class="service-card">
@@ -299,7 +299,7 @@
                     <p class="text-black-50">Financie seu imóvel com as melhores taxas do mercado. Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. </p>
                 </div>
                 <div class="service-btn">
-                    <a href="#" class="btn fill-btn">Saiba mais</a>
+                    <button type="button" class="btn fill-btn">Saiba mais</button>
                 </div>
             </div>
             <div class="service-card">
@@ -309,7 +309,7 @@
                     <p class="text-black-50">Alugue um imóvel conosco. Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. </p>
                 </div>
                 <div class="service-btn">
-                    <a href="#" class="btn fill-btn">Saiba mais</a>
+                    <button type="button" class="btn fill-btn">Saiba mais</button>
                 </div>
             </div>
         </div>
@@ -330,7 +330,7 @@
                 <li><i class='bx bxs-check-circle'></i> Mais de 10% de valorização anual das casas </li>
                 <li><i class='bx bxs-check-circle'></i> Imóveis bem localizados </li>
             </ul>
-            <button href="#" class="btn fill-btn">Entre em contato <i class='bx bxs-right-arrow-circle'></i></button>
+            <button type="button" class="btn fill-btn">Entre em contato <i class='bx bxs-right-arrow-circle'></i></button>
         </div>
         <div class="about-img">
             <img src="https://cdn.prod.website-files.com/65e5e5474c606fdc3f19a597/6601d89b83a99fbecc726703_innovation-defines-our-real-estate-image-property-x-webflow-template.jpg" />
@@ -481,7 +481,7 @@
             { "buscaEndereco", searchModel.BuscaEndereco }
         };
 
-        var uri = NavigationManager.GetUriWithQueryParameters("/busca", queryParams);
+        var uri = NavigationManager.GetUriWithQueryParameters("busca", queryParams);
         NavigationManager.NavigateTo(uri);
     }
     // SLIDE FIRST RENDER

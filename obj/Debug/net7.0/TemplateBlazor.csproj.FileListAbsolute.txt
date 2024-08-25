@@ -822,3 +822,4 @@ C:\Users\AMD\source\repos\TemplateBlazor\TemplateBlazor\obj\Debug\net7.0\Templat
 C:\Users\AMD\source\repos\TemplateBlazor\TemplateBlazor\obj\Debug\net7.0\refint\TemplateBlazor.dll
 C:\Users\AMD\source\repos\TemplateBlazor\TemplateBlazor\obj\Debug\net7.0\TemplateBlazor.pdb
 C:\Users\AMD\source\repos\TemplateBlazor\TemplateBlazor\obj\Debug\net7.0\ref\TemplateBlazor.dll
+C:\Users\AMD\source\repos\TemplateBlazor\TemplateBlazor\obj\Debug\net7.0\TemplateBlazor.sourcelink.json
