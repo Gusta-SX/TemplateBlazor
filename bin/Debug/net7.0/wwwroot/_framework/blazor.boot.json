@@ -1,7 +1,7 @@
 {
   "entryAssembly": "TemplateBlazor",
   "resources": {
-    "hash": "sha256-QvOQD4nJp3MneXaXOpRzAPFIQzaxTqV6ZDDEf1khF3s=",
+    "hash": "sha256-CFdmEY9cvx2aFOpOCI9VQuTQ8/bnxo+0UBzMxN5MPJ0=",
     "runtime": {
       "dotnet.7.0.19.tivq8luz2k.js": "sha256-J9IVsSLjfEIyn/0XKSDWXHMve5eK11v9Aj06G7zPUYo=",
       "dotnet.timezones.blat": "sha256-kK6U8Vo/Xb8zgDH6JtdgAGSA6NUASHhvZoB+hINV0ms=",
@@ -202,10 +202,10 @@
       "mscorlib.dll": "sha256-lo3zWxda3c3QawbfHvOghgqCpdHXBTdqPT0UJceBT2A=",
       "netstandard.dll": "sha256-BvougKnccTedjRXZ+Ll94v1qqBt4cr0MqBVYFpGvYLA=",
       "System.Private.CoreLib.dll": "sha256-i0lh8QB6xhbEgqLyhh/0TaUFxAB3Iz2y0VH8m68TIdY=",
-      "TemplateBlazor.dll": "sha256-O7aLHahbKmi11nGATLPrdLJWMUOJ4wNtTuScK6yVNBc="
+      "TemplateBlazor.dll": "sha256-KwfErGVkIYGaIUmifVrM2WRC7qgvCHYtM7GMQIEb21E="
     },
     "pdb": {
-      "TemplateBlazor.pdb": "sha256-jCPHnDYdfflE+RvSRphqGmCoVE0FcGH637sJM02Djdk="
+      "TemplateBlazor.pdb": "sha256-3qRUWOtfGFLI0bhcmMVXKaPN9yYU1MObCrNcSapk4GM="
     },
     "runtimeAssets": {
       "dotnet.wasm": {
