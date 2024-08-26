@@ -1,127 +1,127 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\obj\\Debug\\net7.0\\compressed\\hw3fshjn60.gz",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\obj\\Debug\\net7.0\\compressed\\ueluem9dgd.gz",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\css\\app.css",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\css\\bootstrap\\swiper-bundle.min.css",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\css\\bootstrap\\swiper-bundle.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\swiper-bundle.min.css"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\css\\busca.css",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\css\\busca.css",
       "PackagePath": "staticwebassets\\css\\busca.css"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\css\\home.css",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\css\\home.css",
       "PackagePath": "staticwebassets\\css\\home.css"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\css\\imovel.css",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\css\\imovel.css",
       "PackagePath": "staticwebassets\\css\\imovel.css"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\css\\open-iconic\\README.md",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\css\\open-iconic\\README.md",
       "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\icon-192.png",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\icon-192.png",
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\img\\edificio.jpg",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\img\\edificio.jpg",
       "PackagePath": "staticwebassets\\img\\edificio.jpg"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\img\\home.jpg",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\img\\home.jpg",
       "PackagePath": "staticwebassets\\img\\home.jpg"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\img\\house.jpg",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\img\\house.jpg",
       "PackagePath": "staticwebassets\\img\\house.jpg"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\img\\img1.jpg",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\img\\img1.jpg",
       "PackagePath": "staticwebassets\\img\\img1.jpg"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\img\\img2.jpg",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\img\\img2.jpg",
       "PackagePath": "staticwebassets\\img\\img2.jpg"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\img\\img3.jpg",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\img\\img3.jpg",
       "PackagePath": "staticwebassets\\img\\img3.jpg"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\img\\logo-rede.png",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\img\\logo-rede.png",
       "PackagePath": "staticwebassets\\img\\logo-rede.png"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\index.html",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\js\\carousel.js",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\js\\carousel.js",
       "PackagePath": "staticwebassets\\js\\carousel.js"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\js\\script.js",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\js\\script.js",
       "PackagePath": "staticwebassets\\js\\script.js"
     },
     {
-      "Id": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\wwwroot\\sample-data\\weather.json",
+      "Id": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\wwwroot\\sample-data\\weather.json",
       "PackagePath": "staticwebassets\\sample-data\\weather.json"
     },
     {

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\TemplateBlazor.csproj": {}
+    "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\TemplateBlazor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\TemplateBlazor.csproj": {
+    "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\TemplateBlazor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\TemplateBlazor.csproj",
+        "projectUniqueName": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\TemplateBlazor.csproj",
         "projectName": "TemplateBlazor",
-        "projectPath": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\TemplateBlazor.csproj",
-        "packagesPath": "C:\\Users\\AMD\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AMD\\source\\repos\\TemplateBlazor\\TemplateBlazor\\obj\\",
+        "projectPath": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\TemplateBlazor.csproj",
+        "packagesPath": "C:\\Users\\gugaa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gugaa\\Desktop\\TemplateBlazor\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\AMD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gugaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,9 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/timipro/_packaging/timipro/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -71,7 +69,7 @@
             "Microsoft.NET.Sdk.WebAssembly.Pack": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.6, )",
+              "version": "[8.0.5, )",
               "autoReferenced": true
             }
           },
@@ -97,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
